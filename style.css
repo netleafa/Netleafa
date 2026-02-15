@@ -1,126 +1,90 @@
-/* Reset */
+:root {
+  --offwhite: #FAF9F6;
+  --warmgrey: #5E5A54;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Brand Colors */
-:root {
-  --background: #F2EFE9;
-  --text: #4A4642;
-  --accent: #C4683A;
-  --max-width: 560px;
-}
-
-/* Base */
 body {
+  background-color: var(--offwhite);
+  color: var(--warmgrey);
   font-family: 'Inter', sans-serif;
-  background: var(--background);
-  color: var(--text);
   text-align: center;
   line-height: 1.7;
-  font-size: 16px;
 }
 
-/* Navigation */
 .nav {
-  padding: 48px 20px 24px;
-  font-size: 14px;
-  letter-spacing: 1px;
+  padding: 40px 0 20px;
 }
 
 .nav a {
-  color: var(--text);
+  color: var(--warmgrey);
   text-decoration: none;
-  margin: 0 14px;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+  margin: 0 20px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  font-weight: 400;
 }
 
 .nav a:hover {
-  opacity: 1;
+  opacity: 0.6;
 }
 
-/* Hero */
 .hero {
-  padding: 40px 20px 40px;
+  padding: 100px 20px 60px;
 }
 
 .logo {
-  width: 320px;
-  max-width: 90%;
+  width: 280px;
+  margin-bottom: 40px;
 }
 
-.tagline {
-  margin-top: 24px;
+.hero h1 {
+  font-size: 30px;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 0.05em;
 }
 
-/* Sections */
 .section {
-  max-width: var(--max-width);
-  margin: 100px auto;
+  max-width: 760px;
+  margin: 80px auto;
   padding: 0 20px;
 }
 
-.section h1 {
-  font-size: 28px;
-  font-weight: 500;
-  margin-bottom: 28px;
-}
-
 .section h2 {
-  font-size: 22px;
-  font-weight: 500;
-  margin-bottom: 24px;
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 30px;
 }
 
 .section p {
-  margin-bottom: 18px;
-  font-size: 15px;
+  font-size: 17px;
+  margin-bottom: 20px;
 }
 
-/* Divider */
-.divider {
-  margin: 80px 0;
-}
-
-.divider img {
-  width: 220px;
-}
-
-/* Links */
-a {
-  color: var(--text);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-.footer {
-  background: var(--text);
+footer.footer {
+  background-color: var(--warmgrey);
   padding: 80px 20px;
   margin-top: 120px;
 }
 
 .footer-inner {
-  max-width: 480px;
+  max-width: 600px;
   margin: 0 auto;
-  background: var(--background);
-  padding: 48px 20px;
+  background-color: var(--offwhite);
+  padding: 50px 20px;
 }
 
-.footer-logo {
-  width: 220px;
+.footer-inner img {
+  width: 160px;
   margin-bottom: 20px;
 }
 
-.footer p {
-  color: var(--text);
+.footer-inner p {
+  color: var(--warmgrey);
   font-size: 14px;
 }
