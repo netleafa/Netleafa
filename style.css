@@ -14,53 +14,67 @@ body {
   background: var(--offwhite);
   color: var(--dark);
   font-family: 'Inter', sans-serif;
-  line-height: 1.75;
+  line-height: 1.8;
   text-align: center;
 }
 
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.reading {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
 .nav {
-  padding: 50px 0;
-  font-size: 15px;
-  letter-spacing: .06em;
+  padding: 60px 0;
+  font-size: 16px;
+  letter-spacing: .08em;
 }
 
 .nav a {
-  color: var(--dark);
+  margin: 0 24px;
   text-decoration: none;
-  margin: 0 20px;
+  color: var(--dark);
 }
 
 .section {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 110px 20px;
+  padding: 200px 0;
+}
+
+.hero {
+  padding-top: 160px;
 }
 
 .logo {
-  width: 480px;
-  margin-bottom: 60px;
+  width: 760px;
+  max-width: 100%;
+  margin-bottom: 100px;
 }
 
 h1 {
-  font-size: 44px;
+  font-size: 48px;
   font-weight: 400;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 h2 {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 500;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 
 p {
   font-size: 18px;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 
 ul {
   list-style: none;
-  margin: 25px 0;
+  margin: 30px 0;
 }
 
 li {
@@ -68,28 +82,27 @@ li {
 }
 
 .divider {
-  width: 240px;
-  margin: 90px auto;
+  width: 820px;
+  max-width: 100%;
+  margin: 140px auto 0 auto;
 }
 
 .footer {
   background: var(--dark);
-  padding: 110px 20px;
+  padding: 160px 0;
 }
 
 .footer-inner {
   background: var(--offwhite);
-  display: inline-block;
-  padding: 60px 40px;
+  padding: 80px;
 }
 
 .footer-logo {
-  width: 180px;
-  margin-bottom: 25px;
+  width: 240px;
+  margin-bottom: 30px;
 }
 
 .footer-inner p {
   color: var(--dark);
   font-size: 14px;
 }
-
