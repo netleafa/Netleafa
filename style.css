@@ -14,68 +14,78 @@ body {
   background: var(--offwhite);
   color: var(--grey);
   font-weight: 300;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
-.container {
+/* 1440 centered grid */
+.wrapper {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 80px;
+}
+
+.inner {
+  max-width: 720px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.narrow {
-  max-width: 760px;
-}
-
+/* Navigation */
 .nav {
-  padding: 40px 0;
+  padding: 48px 0;
 }
 
 .nav a {
+  margin: 0 24px;
   text-decoration: none;
   color: var(--grey);
-  margin: 0 24px;
   font-weight: 300;
 }
 
+/* Sections */
 .section {
-  padding: 180px 0;
+  padding: 160px 0;
 }
 
+/* Logo */
 .logo {
-  width: 360px;
-  margin-bottom: 120px;
+  width: 380px;
+  margin-bottom: 96px;
 }
 
+/* Typography */
 h1 {
   font-weight: 500;
   font-size: 52px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 h2 {
   font-weight: 500;
-  font-size: 28px;
-  margin-bottom: 50px;
+  font-size: 26px;
+  margin-bottom: 40px;
 }
 
 p {
-  font-size: 22px;
+  font-size: 26px;
+  font-weight: 300;
   margin-bottom: 32px;
 }
 
+/* Lists */
 ul {
   list-style: disc;
   list-style-position: inside;
-  font-size: 22px;
+  font-size: 26px;
+  font-weight: 300;
   margin-bottom: 40px;
 }
 
 ul li {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
+/* Divider */
 .divider {
   width: 100%;
   padding: 120px 0;
@@ -88,10 +98,11 @@ ul li {
   max-width: 1440px;
 }
 
+/* Footer */
 .footer {
   background: var(--grey);
   color: var(--offwhite);
-  padding: 220px 0;
+  padding: 200px 0;
 }
 
 .tree {
