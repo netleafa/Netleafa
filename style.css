@@ -1,10 +1,8 @@
 :root {
   --grey: #383736;
   --offwhite: #f4f3f2;
-  --terra: #c66134;
 }
 
-/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,97 +15,90 @@ body {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
 }
 
-/* NAV */
 .nav {
   text-align: center;
-  padding: 36px 0 48px 0;
+  padding: 32px 0;
 }
 
 .nav a {
-  margin: 0 24px;
+  margin: 0 22px;
   text-decoration: none;
   color: var(--grey);
   font-size: 14px;
   font-weight: 300;
-  letter-spacing: .02em;
 }
 
-/* CONTAINER */
 .container {
   max-width: 1440px;
   margin: 0 auto;
 }
 
-/* SECTION */
 .section {
-  max-width: 640px;
+  max-width: 660px;
   margin: 0 auto;
-  padding: 88px 24px;
+  padding: 120px 20px;
   text-align: center;
 }
 
-/* LOGO */
 .logo {
   width: 360px;
-  margin: 0 auto 56px auto;
-  display: block;
+  margin-bottom: 60px;
 }
 
-/* TYPE HIERARCHY */
 h1 {
-  font-size: 34px;
+  font-size: 36px;
   font-weight: 500;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
+  line-height: 1.35;
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 500;
+  margin-top: 90px;
   margin-bottom: 26px;
+  line-height: 1.35;
 }
 
 p {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 300;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
-.medium {
+.shift {
   font-weight: 500;
+  font-size: 20px;
+  margin-top: 60px;
+  margin-bottom: 22px;
 }
 
-/* DIVIDER */
 .divider {
   text-align: center;
-  margin: 72px 0;
+  margin: 40px 0;
 }
 
 .divider img {
-  width: 520px;
-  max-width: 90%;
+  width: 640px;
+  max-width: 100%;
 }
 
-/* BULLETS */
 ul {
-  display: inline-block;
-  text-align: left;
   list-style: disc;
-  margin: 28px auto 28px auto;
-  padding-left: 24px;
-  max-width: 520px;
+  text-align: left;
+  padding-left: 22px;
+  margin: 36px auto;
+  max-width: 480px;
 }
 
 ul li {
-  font-size: 18px;
-  font-weight: 300;
   margin-bottom: 12px;
-  line-height: 1.6;
+  font-size: 17px;
+  font-weight: 300;
 }
 
-/* FOOTER */
 footer {
   background: var(--grey);
   color: var(--offwhite);
@@ -116,13 +107,12 @@ footer {
 }
 
 footer img {
-  width: 64px;
-  margin-bottom: 22px;
+  width: 52px;
+  margin-bottom: 20px;
 }
 
-footer p {
-  margin-bottom: 8px;
-  font-size: 16px;
-  font-weight: 300;
+.footer-name {
+  font-weight: 500;
+  margin-bottom: 6px;
 }
 
