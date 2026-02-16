@@ -1,7 +1,7 @@
 :root {
   --grey: #383736;
   --offwhite: #f4f3f2;
-  --terracotta: #c66134;
+  --terra: #c66134;
 }
 
 * {
@@ -11,11 +11,11 @@
 }
 
 body {
+  background: var(--offwhite);
+  color: var(--grey);
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  color: var(--grey);
-  background-color: var(--offwhite);
-  line-height: 1.45;
+  line-height: 1.6;
 }
 
 .nav {
@@ -27,20 +27,19 @@ body {
   margin: 0 20px;
   text-decoration: none;
   color: var(--grey);
-  font-weight: 300;
   font-size: 14px;
+  font-weight: 300;
 }
 
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .section {
   max-width: 640px;
   margin: 0 auto;
-  padding: 72px 0;
+  padding: 72px 20px;
   text-align: center;
 }
 
@@ -59,18 +58,6 @@ body {
   max-width: 100%;
 }
 
-h1 {
-  font-weight: 500;
-  font-size: 30px;
-  margin-bottom: 24px;
-}
-
-h2 {
-  font-weight: 500;
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
 p {
   font-weight: 300;
   font-size: 18px;
@@ -79,20 +66,23 @@ p {
 
 .medium {
   font-weight: 500;
+  font-size: 18px;
+  margin-top: 36px;
+  margin-bottom: 16px;
 }
 
 ul {
   list-style: disc;
-  text-align: left;
-  margin: 24px auto;
   padding-left: 22px;
+  margin: 24px auto;
   max-width: 480px;
+  text-align: left;
 }
 
 ul li {
-  margin-bottom: 12px;
-  font-weight: 300;
+  margin-bottom: 10px;
   font-size: 18px;
+  font-weight: 300;
 }
 
 footer {
