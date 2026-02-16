@@ -4,109 +4,98 @@
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
   background: var(--offwhite);
   color: var(--grey);
+  font-family: 'Inter', sans-serif;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
-/* 1440 centered grid */
-.wrapper {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 80px;
-}
-
-.inner {
-  max-width: 720px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* Navigation */
 .nav {
-  padding: 48px 0;
+  text-align: center;
+  padding: 32px 0;
 }
 
 .nav a {
   margin: 0 24px;
   text-decoration: none;
   color: var(--grey);
+  font-size: 14px;
   font-weight: 300;
 }
 
-/* Sections */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .section {
-  padding: 160px 0;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
 }
 
-/* Logo */
 .logo {
-  width: 380px;
-  margin-bottom: 96px;
+  width: 260px;
+  margin-bottom: 40px;
 }
 
-/* Typography */
 h1 {
+  font-size: 32px;
   font-weight: 500;
-  font-size: 52px;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 }
 
 h2 {
+  font-size: 22px;
   font-weight: 500;
-  font-size: 26px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 p {
-  font-size: 26px;
-  font-weight: 300;
-  margin-bottom: 32px;
-}
-
-/* Lists */
-ul {
-  list-style: disc;
-  list-style-position: inside;
-  font-size: 26px;
-  font-weight: 300;
-  margin-bottom: 40px;
-}
-
-ul li {
+  font-size: 18px;
   margin-bottom: 16px;
 }
 
-/* Divider */
+ul {
+  text-align: left;
+  list-style-type: disc;
+  padding-left: 22px;
+  margin: 24px auto;
+  max-width: 480px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
 .divider {
-  width: 100%;
-  padding: 120px 0;
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  margin: 60px 0;
 }
 
 .divider img {
+  max-width: 720px;
   width: 100%;
-  max-width: 1440px;
 }
 
-/* Footer */
-.footer {
+footer {
   background: var(--grey);
   color: var(--offwhite);
-  padding: 200px 0;
+  text-align: center;
+  padding: 60px 20px;
 }
 
-.tree {
-  width: 80px;
-  margin-bottom: 60px;
+footer img {
+  width: 50px;
+  margin-bottom: 16px;
 }
 
