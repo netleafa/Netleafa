@@ -1,6 +1,7 @@
 :root {
   --grey: #383736;
   --offwhite: #f4f3f2;
+  --terracotta: #c66134;
 }
 
 * {
@@ -10,104 +11,119 @@
 }
 
 body {
-  background: var(--offwhite);
+  background-color: var(--offwhite);
   color: var(--grey);
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.5;
+}
+
+.nav {
+  text-align: center;
+  padding: 32px 0;
+}
+
+.nav a {
+  margin: 0 24px;
+  text-decoration: none;
+  color: var(--grey);
+  font-weight: 300;
+  font-size: 14px;
 }
 
 .container {
   max-width: 1440px;
   margin: 0 auto;
-}
-
-.nav {
-  text-align: center;
-  padding: 30px 0;
-}
-
-.nav a {
-  margin: 0 22px;
-  text-decoration: none;
-  color: var(--grey);
-  font-size: 14px;
-  font-weight: 300;
+  padding: 0 20px;
 }
 
 .section {
-  max-width: 660px;
+  max-width: 720px;
   margin: 0 auto;
-  padding: 110px 20px;
   text-align: center;
+  padding: 80px 0;
 }
 
 .logo {
-  width: 360px;
-  margin-bottom: 60px;
-}
-
-h1 {
-  font-size: 34px;
-  font-weight: 500;
-  margin-bottom: 30px;
-  line-height: 1.35;
-}
-
-h2 {
-  font-size: 26px;
-  font-weight: 500;
-  margin-top: 80px;
-  margin-bottom: 26px;
-}
-
-p {
-  font-size: 17px;
-  margin-bottom: 18px;
-}
-
-.emphasis {
-  font-weight: 500;
-  font-size: 19px;
-  margin-top: 55px;
-  margin-bottom: 22px;
+  width: 320px;
+  display: block;
+  margin: 0 auto 40px auto;
 }
 
 .divider {
   text-align: center;
-  margin: 45px 0;
+  margin: 80px 0;
 }
 
 .divider img {
-  width: 640px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 1440px;
+}
+
+h1.light, p.light {
+  font-weight: 300;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+h1.medium, h2.medium, p.medium {
+  font-weight: 500;
+}
+
+h1.medium {
+  font-size: 32px;
+  margin: 40px 0 24px 0;
+}
+
+h2.medium {
+  font-size: 24px;
+  margin: 32px 0 20px 0;
+}
+
+p.medium {
+  font-size: 18px;
+  margin: 24px 0;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 16px;
 }
 
 ul {
+  list-style: disc;
+  margin: 24px auto;
+  padding-left: 24px;
   max-width: 480px;
-  margin: 36px auto;
   text-align: left;
-  padding-left: 20px;
 }
 
 ul li {
   margin-bottom: 12px;
-  font-size: 17px;
+  font-weight: 300;
+  font-size: 18px;
 }
 
 footer {
-  background: var(--grey);
+  background-color: var(--grey);
   color: var(--offwhite);
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 20px;
 }
 
 footer img {
-  width: 50px;
-  margin-bottom: 18px;
+  width: 48px;
+  display: block;
+  margin: 0 auto 16px auto;
+}
+
+footer p.medium {
+  margin: 8px 0;
+  font-weight: 500;
 }
 
 footer p {
-  margin-bottom: 6px;
+  margin: 4px 0;
 }
 
