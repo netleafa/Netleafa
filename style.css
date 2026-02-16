@@ -14,7 +14,7 @@ body {
   color: var(--grey);
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  line-height: 1.45;
+  line-height: 1.6;
 }
 
 .nav {
@@ -47,15 +47,17 @@ body {
   margin-bottom: 36px;
 }
 
+h1, h2 {
+  font-weight: 500;
+}
+
 h1 {
   font-size: 30px;
-  font-weight: 500;
   margin-bottom: 24px;
 }
 
 h2 {
   font-size: 20px;
-  font-weight: 500;
   margin-bottom: 20px;
 }
 
@@ -67,6 +69,10 @@ p {
 
 .medium {
   font-weight: 500;
+}
+
+.light {
+  font-weight: 300;
 }
 
 .divider {
@@ -81,10 +87,10 @@ p {
 
 ul {
   list-style: disc;
-  margin: 24px auto;
   padding-left: 22px;
   max-width: 480px;
-  text-align: left;
+  margin: 24px auto;
+  text-align: left; /* left-aligned text but centered block */
 }
 
 ul li {
