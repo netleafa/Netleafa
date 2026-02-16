@@ -17,9 +17,14 @@ body {
   line-height: 1.6;
 }
 
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .nav {
   text-align: center;
-  padding: 32px 0;
+  padding: 30px 0;
 }
 
 .nav a {
@@ -30,15 +35,10 @@ body {
   font-weight: 300;
 }
 
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
 .section {
   max-width: 660px;
   margin: 0 auto;
-  padding: 120px 20px;
+  padding: 110px 20px;
   text-align: center;
 }
 
@@ -48,7 +48,7 @@ body {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 34px;
   font-weight: 500;
   margin-bottom: 30px;
   line-height: 1.35;
@@ -57,27 +57,25 @@ h1 {
 h2 {
   font-size: 26px;
   font-weight: 500;
-  margin-top: 90px;
+  margin-top: 80px;
   margin-bottom: 26px;
-  line-height: 1.35;
 }
 
 p {
   font-size: 17px;
-  font-weight: 300;
   margin-bottom: 18px;
 }
 
-.shift {
+.emphasis {
   font-weight: 500;
-  font-size: 20px;
-  margin-top: 60px;
+  font-size: 19px;
+  margin-top: 55px;
   margin-bottom: 22px;
 }
 
 .divider {
   text-align: center;
-  margin: 40px 0;
+  margin: 45px 0;
 }
 
 .divider img {
@@ -86,17 +84,15 @@ p {
 }
 
 ul {
-  list-style: disc;
-  text-align: left;
-  padding-left: 22px;
-  margin: 36px auto;
   max-width: 480px;
+  margin: 36px auto;
+  text-align: left;
+  padding-left: 20px;
 }
 
 ul li {
   margin-bottom: 12px;
   font-size: 17px;
-  font-weight: 300;
 }
 
 footer {
@@ -107,12 +103,11 @@ footer {
 }
 
 footer img {
-  width: 52px;
-  margin-bottom: 20px;
+  width: 50px;
+  margin-bottom: 18px;
 }
 
-.footer-name {
-  font-weight: 500;
+footer p {
   margin-bottom: 6px;
 }
 
