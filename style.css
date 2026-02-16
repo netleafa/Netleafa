@@ -14,7 +14,7 @@ body {
   background: var(--offwhite);
   color: var(--grey);
   font-weight: 300;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 .container {
@@ -36,7 +36,6 @@ body {
   text-decoration: none;
   color: var(--grey);
   margin: 0 24px;
-  font-size: 16px;
   font-weight: 300;
 }
 
@@ -64,7 +63,17 @@ h2 {
 p {
   font-size: 22px;
   margin-bottom: 32px;
-  white-space: pre-line;
+}
+
+ul {
+  list-style: disc;
+  list-style-position: inside;
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+
+ul li {
+  margin-bottom: 12px;
 }
 
 .divider {
@@ -89,3 +98,4 @@ p {
   width: 80px;
   margin-bottom: 60px;
 }
+
