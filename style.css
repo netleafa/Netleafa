@@ -43,7 +43,7 @@ body {
 }
 
 .logo {
-  width: 280px;
+  width: 350px; /* increased size */
   margin-bottom: 36px;
 }
 
@@ -71,8 +71,16 @@ p {
   font-weight: 500;
 }
 
-.light {
-  font-weight: 300;
+.larger {
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+
+.inline {
+  display: inline-block;
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 36px;
 }
 
 .divider {
