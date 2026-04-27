@@ -8,48 +8,102 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .animation-slides {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            height: 600px;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .animation-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            animation: fadeInOut 9s infinite;
+        }
+
+        .animation-slide:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .animation-slide:nth-child(2) {
+            animation-delay: 3s;
+        }
+
+        .animation-slide:nth-child(3) {
+            animation-delay: 6s;
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            11% { opacity: 1; }
+            33% { opacity: 1; }
+            44% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        .animation-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation Header -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">netleafa</a>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#buy" class="nav-link">Buy</a></li>
-                <li class="nav-item"><a href="#rent" class="nav-link">Rent</a></li>
-                <li class="nav-item"><a href="#locations" class="nav-link">Locations</a></li>
-                <li class="nav-item"><a href="#partner" class="nav-link">Become a Partner</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#buy">Buy</a></li>
+            <li><a href="#rent">Rent</a></li>
+            <li><a href="#locations">Locations</a></li>
+            <li><a href="#partner">Become a Partner</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <img src="assets/logo.svg" alt="Netleafa Logo" class="hero-logo">
-            <h1 class="hero-title">netleafa</h1>
-            <p class="hero-tagline">Catch what falls.</p>
-            <p class="hero-description">A simple way to manage wind, seasonality, and labor costs.</p>
+    <!-- Animation Section -->
+    <section class="animation-slides">
+        <div class="animation-slide">
+            <img src="assets/slide_0.png" alt="Slide 1">
+        </div>
+        <div class="animation-slide">
+            <img src="assets/slide_1.png" alt="Slide 2">
+        </div>
+        <div class="animation-slide">
+            <img src="assets/slide_2.png" alt="Slide 3">
         </div>
     </section>
 
-    <!-- Section 1: The Problem -->
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="assets/logo.svg" alt="Netleafa" class="hero-logo">
+        <h1 class="hero-title">netleafa</h1>
+        <p class="hero-tagline">Catch what falls.</p>
+        <p class="hero-description">A simple way to manage wind, seasonality, and labor costs.</p>
+    </section>
+
+    <!-- Section 1 -->
     <section class="content-section">
-        <div class="section-content">
-            <h2>The problem is bigger than leaves.</h2>
+        <h2 class="section-title">The problem is bigger than leaves.</h2>
+        <img src="assets/divider.svg" alt="" class="divider">
+        <div class="content-wrapper">
             <p>A simple way to manage wind, seasonality, and labor costs.</p>
             <p>At Netleafa, we understand that seasonal debris management is more than just a chore—it's a challenge that affects property values, maintenance budgets, and environmental impact. Traditional methods are labor-intensive, costly, and often wasteful.</p>
             <p>Our innovative ground capture system transforms how you think about leaves and debris. Instead of seeing them as waste, we see them as resources waiting to be reclaimed.</p>
         </div>
-        <img src="assets/divider.svg" alt="Divider" class="divider">
     </section>
 
-    <!-- Section 2: Features -->
+    <!-- Section 2 -->
     <section class="content-section">
-        <div class="section-content">
-            <h2>Powered by design, informed by nature.</h2>
+        <h2 class="section-title">Powered by design, informed by nature.</h2>
+        <img src="assets/divider.svg" alt="" class="divider">
+        <div class="content-wrapper">
             <p>We believe that good design solves real problems. Our system is engineered to capture, contain, and transform seasonal debris into valuable resources.</p>
         </div>
         <div class="features-grid">
@@ -66,32 +120,32 @@
                 <p>Available for residential and commercial properties, buy or rent.</p>
             </div>
         </div>
-        <img src="assets/divider.svg" alt="Divider" class="divider">
     </section>
 
-    <!-- Section 3: Hero Image -->
+    <!-- Image Section -->
     <section class="image-section">
-        <img src="assets/Phase1.PNG" alt="Grass field with leaves" class="hero-image">
-        <img src="assets/divider.svg" alt="Divider" class="divider">
+        <img src="assets/Phase1.PNG" alt="Grass and leaves" class="section-image">
+        <img src="assets/divider.svg" alt="" class="divider">
     </section>
 
-    <!-- Section 4: How We Think -->
+    <!-- Section 3 -->
     <section class="content-section">
-        <div class="section-content">
-            <h2>How we think about the ground beneath us</h2>
+        <h2 class="section-title">How we think about the ground beneath us</h2>
+        <img src="assets/divider.svg" alt="" class="divider">
+        <div class="content-wrapper">
             <p>The ground is not just a surface—it's a living ecosystem. Every leaf, every piece of debris tells a story about the seasons and the natural world around us.</p>
             <p>At Netleafa, we're committed to working with nature, not against it. Our system captures what falls, preserves its value, and transforms it into something useful.</p>
             <p>This philosophy guides everything we do—from product design to partnership development.</p>
         </div>
-        <img src="assets/divider.svg" alt="Divider" class="divider">
     </section>
 
-    <!-- Section 5: The Process -->
+    <!-- Section 4 -->
     <section class="content-section">
-        <div class="section-content">
-            <h2>Catch, Contain, Compost, Craft, and Resell</h2>
+        <h2 class="section-title">Catch, Contain, Compost, Craft, and Resell</h2>
+        <img src="assets/divider.svg" alt="" class="divider">
+        <div class="content-wrapper">
             <p>Our five-step process transforms seasonal debris into valuable resources:</p>
-            <ol>
+            <ol class="steps-list">
                 <li><strong>Catch:</strong> Our ground capture system efficiently collects leaves and debris from any property.</li>
                 <li><strong>Contain:</strong> Materials are securely contained in our reusable collection vessels for safe transport and processing.</li>
                 <li><strong>Compost:</strong> Organic materials are processed into nutrient-rich compost through our sustainable composting process.</li>
@@ -99,15 +153,15 @@
                 <li><strong>Resell:</strong> Products are resold to customers and businesses, creating value from what was once considered waste.</li>
             </ol>
         </div>
-        <img src="assets/divider.svg" alt="Divider" class="divider">
     </section>
 
-    <!-- Section 6: Why Choose Netleafa -->
+    <!-- Section 5 -->
     <section class="content-section">
-        <div class="section-content">
-            <h2>Why Choose Netleafa?</h2>
+        <h2 class="section-title">Why Choose Netleafa?</h2>
+        <img src="assets/divider.svg" alt="" class="divider">
+        <div class="content-wrapper">
             <p>Netleafa represents a new approach to seasonal property maintenance. We combine innovative technology with environmental responsibility to deliver real value.</p>
-            <ul>
+            <ul class="benefits-list">
                 <li>Proven system that works for residential and commercial properties</li>
                 <li>Reduces seasonal labor costs by up to 60%</li>
                 <li>Transforms waste into valuable compost products</li>
@@ -116,26 +170,26 @@
                 <li>Environmentally responsible solution that supports sustainability goals</li>
             </ul>
         </div>
-        <img src="assets/divider.svg" alt="Divider" class="divider">
     </section>
 
-    <!-- Section 7: Our Locations -->
-    <section id="locations" class="content-section">
-        <div class="section-content">
-            <h2>Find us in Your Area</h2>
+    <!-- Section 6 -->
+    <section class="content-section" id="locations">
+        <h2 class="section-title">Find us in Your Area</h2>
+        <img src="assets/divider.svg" alt="" class="divider">
+        <div class="content-wrapper">
             <p>Netleafa is expanding across the country. We're currently operating in select regions and actively seeking partners to bring our system to new communities.</p>
             <p>Check our locations page to find a service area near you or learn about partnership opportunities in your region.</p>
         </div>
-        <img src="assets/divider.svg" alt="Divider" class="divider">
     </section>
 
-    <!-- Section 8: Partnership -->
-    <section id="partner" class="content-section">
-        <div class="section-content">
-            <h2>Powered by design, informed by nature.</h2>
+    <!-- Section 7 -->
+    <section class="content-section" id="partner">
+        <h2 class="section-title">Powered by design, informed by nature.</h2>
+        <img src="assets/divider.svg" alt="" class="divider">
+        <div class="content-wrapper">
             <p>Becoming a Netleafa partner means joining a movement toward sustainable property management. We provide comprehensive training, ongoing support, and marketing resources to help you succeed.</p>
-            <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--color-gold-dark); margin-top: 2rem; margin-bottom: 1rem;">Partnership Benefits:</h3>
-            <ul>
+            <h3 class="subsection-title">Partnership Benefits:</h3>
+            <ul class="benefits-list">
                 <li>Comprehensive training and certification program</li>
                 <li>Marketing and brand support</li>
                 <li>Ongoing technical assistance</li>
@@ -143,33 +197,30 @@
                 <li>Competitive pricing and favorable terms</li>
             </ul>
         </div>
-        <img src="assets/divider.svg" alt="Divider" class="divider">
     </section>
 
-    <!-- Section 9: Contact -->
-    <section id="contact" class="content-section">
-        <div class="section-content">
-            <h2>Get in Touch</h2>
+    <!-- Section 8 -->
+    <section class="content-section" id="contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <img src="assets/divider.svg" alt="" class="divider">
+        <div class="content-wrapper">
             <p>Have questions about Netleafa? Want to learn more about our system or partnership opportunities?</p>
             <p>We're here to help. Contact us today to discuss how Netleafa can transform your approach to seasonal debris management.</p>
-            <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--color-gold-dark); margin-top: 2rem; margin-bottom: 1rem;">Contact Information:</h3>
-            <ul style="list-style: none;">
-                <li>Email: <strong>info@netleafa.com</strong></li>
-                <li>Phone: <strong>1-800-NETLEAFA</strong></li>
-                <li>Web: <strong>www.netleafa.com</strong></li>
-            </ul>
+            <h3 class="subsection-title">Contact Information:</h3>
+            <p class="contact-info">
+                Email: <strong>info@netleafa.com</strong><br>
+                Phone: <strong>1-800-NETLEAFA</strong><br>
+                Web: <strong>www.netleafa.com</strong>
+            </p>
         </div>
-        <img src="assets/divider.svg" alt="Divider" class="divider">
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <img src="assets/logo.svg" alt="Netleafa Logo" class="footer-logo">
-            <h3>netleafa</h3>
-            <p>Catch what falls.</p>
-            <p>&copy; 2024 Netleafa. All rights reserved.</p>
-        </div>
+        <img src="assets/logo.svg" alt="Netleafa" class="footer-logo">
+        <h2 class="footer-title">netleafa</h2>
+        <p class="footer-tagline">Catch what falls.</p>
+        <p class="footer-copyright">&copy; 2024 Netleafa. All rights reserved.</p>
     </footer>
 </body>
 </html>
