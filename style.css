@@ -182,4 +182,3 @@ footer {
 @media (max-width: 480px) {
   .nav-inner { gap: 12px; }
   .nav-inner a { font-size: 10px; }
-}
