@@ -1,226 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netleafa - Catch what falls.</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .animation-slides {
-            position: relative;
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            height: 600px;
-            overflow: hidden;
-            border-radius: 4px;
-        }
-
-        .animation-slide {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            animation: fadeInOut 9s infinite;
-        }
-
-        .animation-slide:nth-child(1) {
-            animation-delay: 0s;
-        }
-
-        .animation-slide:nth-child(2) {
-            animation-delay: 3s;
-        }
-
-        .animation-slide:nth-child(3) {
-            animation-delay: 6s;
-        }
-
-        @keyframes fadeInOut {
-            0% { opacity: 0; }
-            11% { opacity: 1; }
-            33% { opacity: 1; }
-            44% { opacity: 0; }
-            100% { opacity: 0; }
-        }
-
-        .animation-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netleafa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,600;0,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navigation">
-        <ul class="nav-list">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#buy">Buy</a></li>
-            <li><a href="#rent">Rent</a></li>
-            <li><a href="#locations">Locations</a></li>
-            <li><a href="#partner">Become a Partner</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    <!-- Animation Section -->
-    <section class="animation-slides">
-        <div class="animation-slide">
-            <img src="assets/slide_0.png" alt="Slide 1">
-        </div>
-        <div class="animation-slide">
-            <img src="assets/slide_1.png" alt="Slide 2">
-        </div>
-        <div class="animation-slide">
-            <img src="assets/slide_2.png" alt="Slide 3">
-        </div>
-    </section>
+  <!-- NAV -->
+  <nav class="site-nav">
+    <ul>
+      <li><a href="#intro">Intro</a></li>
+      <li class="pipe">|</li>
+      <li><a href="#why">Why</a></li>
+      <li class="pipe">|</li>
+      <li><a href="#how">How</a></li>
+      <li class="pipe">|</li>
+      <li><a href="#manifesto">Manifesto</a></li>
+      <li class="pipe">|</li>
+      <li><a href="#connect">Connect</a></li>
+      <li class="pipe">|</li>
+      <li><a href="#invest">Invest</a></li>
+    </ul>
+  </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <img src="assets/logo.svg" alt="Netleafa" class="hero-logo">
-        <h1 class="hero-title">netleafa</h1>
-        <p class="hero-tagline">Catch what falls.</p>
-        <p class="hero-description">A simple way to manage wind, seasonality, and labor costs.</p>
-    </section>
+  <!-- INTRO -->
+  <section id="intro" class="section">
 
-    <!-- Section 1 -->
-    <section class="content-section">
-        <h2 class="section-title">The problem is bigger than leaves.</h2>
-        <img src="assets/divider.svg" alt="" class="divider">
-        <div class="content-wrapper">
-            <p>A simple way to manage wind, seasonality, and labor costs.</p>
-            <p>At Netleafa, we understand that seasonal debris management is more than just a chore—it's a challenge that affects property values, maintenance budgets, and environmental impact. Traditional methods are labor-intensive, costly, and often wasteful.</p>
-            <p>Our innovative ground capture system transforms how you think about leaves and debris. Instead of seeing them as waste, we see them as resources waiting to be reclaimed.</p>
-        </div>
-    </section>
+    <div class="logo-wrap">
+      <img src="assets/logo.svg" alt="netleafa — Catch what falls." class="logo" />
+    </div>
 
-    <!-- Section 2 -->
-    <section class="content-section">
-        <h2 class="section-title">Powered by design, informed by nature.</h2>
-        <img src="assets/divider.svg" alt="" class="divider">
-        <div class="content-wrapper">
-            <p>We believe that good design solves real problems. Our system is engineered to capture, contain, and transform seasonal debris into valuable resources.</p>
-        </div>
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>Efficient collection</h3>
-                <p>Reduces labor time and costs with our innovative ground capture system.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Sustainable materials</h3>
-                <p>Support environmental goals while transforming waste into valuable resources.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Flexible options</h3>
-                <p>Available for residential and commercial properties, buy or rent.</p>
-            </div>
-        </div>
-    </section>
+    <div class="content-wrap">
+      <h1>A simpler way to manage what naturally collects on the ground.</h1>
 
-    <!-- Image Section -->
-    <section class="image-section">
-        <img src="assets/Phase1.PNG" alt="Grass and leaves" class="section-image">
-        <img src="assets/divider.svg" alt="" class="divider">
-    </section>
+      <p>Leaves fall. Seeds drop. Acorns land. Pine needles accumulate.<br>
+      That is simply how outdoor environments work.</p>
 
-    <!-- Section 3 -->
-    <section class="content-section">
-        <h2 class="section-title">How we think about the ground beneath us</h2>
-        <img src="assets/divider.svg" alt="" class="divider">
-        <div class="content-wrapper">
-            <p>The ground is not just a surface—it's a living ecosystem. Every leaf, every piece of debris tells a story about the seasons and the natural world around us.</p>
-            <p>At Netleafa, we're committed to working with nature, not against it. Our system captures what falls, preserves its value, and transforms it into something useful.</p>
-            <p>This philosophy guides everything we do—from product design to partnership development.</p>
-        </div>
-    </section>
+      <p>For decades, we have responded with noise, fuel, plastic bags, and repeated labor.<br>
+      More effort than necessary. More waste than makes sense.</p>
 
-    <!-- Section 4 -->
-    <section class="content-section">
-        <h2 class="section-title">Catch, Contain, Compost, Craft, and Resell</h2>
-        <img src="assets/divider.svg" alt="" class="divider">
-        <div class="content-wrapper">
-            <p>Our five-step process transforms seasonal debris into valuable resources:</p>
-            <ol class="steps-list">
-                <li><strong>Catch:</strong> Our ground capture system efficiently collects leaves and debris from any property.</li>
-                <li><strong>Contain:</strong> Materials are securely contained in our reusable collection vessels for safe transport and processing.</li>
-                <li><strong>Compost:</strong> Organic materials are processed into nutrient-rich compost through our sustainable composting process.</li>
-                <li><strong>Craft:</strong> Finished compost is crafted into premium products including soil amendments and specialty blends.</li>
-                <li><strong>Resell:</strong> Products are resold to customers and businesses, creating value from what was once considered waste.</li>
-            </ol>
-        </div>
-    </section>
+      <p><strong>Netleafa introduces a different approach.</strong></p>
 
-    <!-- Section 5 -->
-    <section class="content-section">
-        <h2 class="section-title">Why Choose Netleafa?</h2>
-        <img src="assets/divider.svg" alt="" class="divider">
-        <div class="content-wrapper">
-            <p>Netleafa represents a new approach to seasonal property maintenance. We combine innovative technology with environmental responsibility to deliver real value.</p>
-            <ul class="benefits-list">
-                <li>Proven system that works for residential and commercial properties</li>
-                <li>Reduces seasonal labor costs by up to 60%</li>
-                <li>Transforms waste into valuable compost products</li>
-                <li>Flexible rental and purchase options</li>
-                <li>Dedicated support and partnership opportunities</li>
-                <li>Environmentally responsible solution that supports sustainability goals</li>
-            </ul>
-        </div>
-    </section>
+      <p>Inspired by agricultural harvesting methods, Netleafa is a passive ground-capture system designed to collect natural debris before it becomes work.</p>
 
-    <!-- Section 6 -->
-    <section class="content-section" id="locations">
-        <h2 class="section-title">Find us in Your Area</h2>
-        <img src="assets/divider.svg" alt="" class="divider">
-        <div class="content-wrapper">
-            <p>Netleafa is expanding across the country. We're currently operating in select regions and actively seeking partners to bring our system to new communities.</p>
-            <p>Check our locations page to find a service area near you or learn about partnership opportunities in your region.</p>
-        </div>
-    </section>
+      <p><strong>You lay it down. Time does the work.</strong></p>
 
-    <!-- Section 7 -->
-    <section class="content-section" id="partner">
-        <h2 class="section-title">Powered by design, informed by nature.</h2>
-        <img src="assets/divider.svg" alt="" class="divider">
-        <div class="content-wrapper">
-            <p>Becoming a Netleafa partner means joining a movement toward sustainable property management. We provide comprehensive training, ongoing support, and marketing resources to help you succeed.</p>
-            <h3 class="subsection-title">Partnership Benefits:</h3>
-            <ul class="benefits-list">
-                <li>Comprehensive training and certification program</li>
-                <li>Marketing and brand support</li>
-                <li>Ongoing technical assistance</li>
-                <li>Access to our growing customer network</li>
-                <li>Competitive pricing and favorable terms</li>
-            </ul>
-        </div>
-    </section>
+      <p>When you are ready, you roll it up and move on.</p>
+    </div>
 
-    <!-- Section 8 -->
-    <section class="content-section" id="contact">
-        <h2 class="section-title">Get in Touch</h2>
-        <img src="assets/divider.svg" alt="" class="divider">
-        <div class="content-wrapper">
-            <p>Have questions about Netleafa? Want to learn more about our system or partnership opportunities?</p>
-            <p>We're here to help. Contact us today to discuss how Netleafa can transform your approach to seasonal debris management.</p>
-            <h3 class="subsection-title">Contact Information:</h3>
-            <p class="contact-info">
-                Email: <strong>info@netleafa.com</strong><br>
-                Phone: <strong>1-800-NETLEAFA</strong><br>
-                Web: <strong>www.netleafa.com</strong>
-            </p>
-        </div>
-    </section>
+    <div class="divider-wrap">
+      <img src="assets/divider.svg" alt="" class="divider-img" />
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <img src="assets/logo.svg" alt="Netleafa" class="footer-logo">
-        <h2 class="footer-title">netleafa</h2>
-        <p class="footer-tagline">Catch what falls.</p>
-        <p class="footer-copyright">&copy; 2024 Netleafa. All rights reserved.</p>
-    </footer>
+  </section>
+
+  <!-- WHY -->
+  <section id="why" class="section">
+    <div class="content-wrap">
+
+      <h2>The problem is bigger than leaves.</h2>
+
+      <p>Leaves are only part of what falls.<br>
+      Seeds, pods, and organic debris collect unevenly and resist raking.</p>
+
+      <p><strong>Traditional cleanup methods struggle with this material.</strong></p>
+
+      <p>Blowers scatter it. Rakes miss it.<br>
+      Vacuum systems clog or require repeated passes.</p>
+
+      <p>The work becomes louder, messier, and more expensive every season.</p>
+
+      <p><strong>Netleafa captures everything that falls by addressing the problem earlier.</strong></p>
+
+      <p>By placing a thin net directly on the ground, debris is collected as it lands instead of being chased afterward. Shape, size, and density no longer matter.</p>
+
+      <p><strong>One system. One motion. Less effort overall.</strong></p>
+
+    </div>
+
+    <div class="divider-wrap">
+      <img src="assets/divider.svg" alt="" class="divider-img" />
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section id="how" class="section">
+    <div class="content-wrap">
+
+      <h2>Passive by design. Effective by nature.</h2>
+
+      <p>Netleafa is a thin, biodegradable hemp netting system made from natural fibers.</p>
+
+      <p>The net is laid directly on lawns, fields, or managed ground and staked flat.</p>
+
+      <p>Openings allow sunlight, water, and air to reach the surface below.</p>
+
+      <p>As debris falls, it stays on top.</p>
+
+      <p>Leaves, acorns, pine needles, seed pods, and organic material are captured together without blowing, raking, or vacuuming.</p>
+
+      <p><strong>During the season or when an interval is complete:</strong></p>
+      <ul>
+        <li>Stakes are removed</li>
+        <li>The net is gathered from the edges</li>
+        <li>Debris is removed in one controlled motion</li>
+      </ul>
+
+      <p><strong>No engines. No constant labor. No repeated cleanup cycles.<br>
+      The system works quietly in the background.</strong></p>
+
+    </div>
+
+    <!-- PHASE ANIMATION BAND -->
+    <div class="phase-band">
+      <div class="phase-frame active"><img src="assets/Phase1.PNG" alt="" /></div>
+      <div class="phase-frame"><img src="assets/Phase2.PNG" alt="" /></div>
+      <div class="phase-frame"><img src="assets/Phase3.PNG" alt="" /></div>
+    </div>
+
+    <div class="divider-wrap" style="padding-top: 48px;">
+      <img src="assets/divider.svg" alt="" class="divider-img" />
+    </div>
+
+  </section>
+
+  <!-- MANIFESTO -->
+  <section id="manifesto" class="section">
+    <div class="content-wrap">
+
+      <h2>How we think about the ground beneath us.</h2>
+
+      <p>For decades, we have treated these natural cycles as problems to chase instead of systems to manage.</p>
+
+      <p><strong>Netleafa was built on a simpler idea.</strong></p>
+
+      <p>What if the ground could do more of the work itself?</p>
+
+      <p>Inspired by agricultural harvesting, we created a passive way to catch what falls.</p>
+
+      <p><strong>No engines. No urgency. No constant intervention.<br>
+      You lay it down. Time does the work.</strong></p>
+
+      <p><strong>But Netleafa is not only about cleanup.</strong></p>
+
+      <p>It is about rethinking how we interact with the ground.</p>
+
+      <p><strong>How we seed it. How we protect it.<br>
+      How we maintain it across seasons.</strong></p>
+
+      <p>The same system that captures debris can support growth.<br>
+      The same process that simplifies cleanup can simplify care.<br>
+      The same infrastructure can adapt without changing how people work.</p>
+
+      <p><strong>We believe the best systems are quiet.<br>
+      That the most useful tools become habits.</strong></p>
+
+      <p>And that progress often comes from removing friction, not adding complexity.</p>
+
+      <p><strong>Netleafa is meant to be used, discarded, and then reapplied.<br>
+      A cycle that mirrors nature instead of fighting it.</strong></p>
+
+    </div>
+
+    <div class="divider-wrap">
+      <img src="assets/divider.svg" alt="" class="divider-img" />
+    </div>
+  </section>
+
+  <!-- INVEST -->
+  <section id="invest" class="section">
+    <div class="content-wrap">
+
+      <h2>A repeat-use platform built on simplicity, habit, and local scale.</h2>
+
+      <p>Netleafa is designed around one fundamental shift.<br>
+      Instead of chasing debris after it falls, capture it as it lands.<br>
+      That shift unlocks more than convenience.<br>
+      It creates a repeat-use system, predictable demand, and a foundation for an entirely new category of ground management.</p>
+
+      <p><strong>A product that becomes a habit.</strong><br>
+      Netleafa is sticky by design.</p>
+
+      <p>Once users experience passive ground capture, they do not return to traditional cleanup methods. The benefit is immediate and obvious. Less labor. Less mess. Less time spent managing a problem that repeats every year.</p>
+
+      <p>At the same time, Netleafa is not meant to be permanent.</p>
+
+      <p>The net cannot be left down indefinitely. Over time it will restrict growth and naturally begin to break down.</p>
+
+      <p>Netleafa is designed to be applied, used, removed, and reapplied.</p>
+
+      <p><strong>That cycle matters.</strong></p>
+
+      <p>It creates a tool people plan around season after season.</p>
+
+      <p><strong>A default solution.</strong></p>
+
+      <p>A product that becomes part of routine maintenance rather than a one-time purchase.</p>
+
+      <p>This repeat-use behavior drives long-term value without subscriptions or forced lock-in.</p>
+
+      <h2>More than debris removal.</h2>
+
+      <p>Debris capture is the entry point, not the ceiling.</p>
+
+      <p>The same netting system can be adapted to carry additional functions without changing how users interact with it.</p>
+
+      <p><strong>Future applications include:</strong></p>
+      <ul>
+        <li>Seed-loaded netting for lawn seeding and repair</li>
+        <li>Fertilizer-integrated netting for controlled nutrient delivery</li>
+        <li>Ground suppression netting for lawn removal or transition</li>
+        <li>Salt-loaded netting for winter ice control on sidewalks, paths, and managed surfaces</li>
+      </ul>
+
+      <p>Each application follows the same behavior:</p>
+
+      <p><strong>Lay it down. Let it work. Remove it.</strong></p>
+
+      <p><strong>One system. Multiple seasons. No retraining required.</strong></p>
+
+      <h2>From product to service ecosystem.</h2>
+
+      <p>Netleafa also enables a service model that does not exist today.</p>
+
+      <p>A single team can manage multiple stages of ground care using the same core system:</p>
+      <ul>
+        <li>Spring seeding and fertilization</li>
+        <li>Seasonal maintenance</li>
+        <li>Fall debris capture</li>
+        <li>Winter ice management</li>
+      </ul>
+
+      <p>This allows for full-cycle ground management without changing tools, vendors, or workflows.</p>
+
+      <p><strong>For property owners, this simplifies coordination. For operators, it increases efficiency. For the business, it expands revenue without expanding complexity.</strong></p>
+
+      <h2>Designed for local manufacturing.</h2>
+
+      <p>While Netleafa could be mass produced overseas at a lower unit cost, the system is intentionally suited for regional production.</p>
+
+      <p>Hemp grows quickly and regenerates efficiently.<br>
+      Its fibers are durable, biodegradable, and visually appropriate for outdoor use.</p>
+
+      <p>Netting production and finishing can be handled by small and mid-sized facilities.</p>
+
+      <p>This supports a distributed manufacturing model:</p>
+      <ul>
+        <li>Shorter supply chains</li>
+        <li>Reduced shipping costs</li>
+        <li>Faster response to regional demand</li>
+        <li>Stronger alignment with local economies</li>
+      </ul>
+
+      <p>The opportunity exists to build a network of US-based, family-owned manufacturing and service partners operating under a shared system.</p>
+
+      <p>A modern, standardized version of a mom-and-pop infrastructure.</p>
+
+      <h2>Not a novelty. Not a luxury.</h2>
+
+      <p>Netleafa is not positioned as a designer lawn product or premium accessory.<br>
+      It is meant to be:</p>
+      <ul>
+        <li>Simple</li>
+        <li>Accessible</li>
+        <li>Inexpensive</li>
+        <li>Reliable</li>
+      </ul>
+
+      <p>The goal is not to win on price alone, but to become the option people do not reconsider.</p>
+
+      <p>A few dollars cheaper is not enough to switch away from something that works quietly and consistently.</p>
+
+      <p><strong>That loyalty is driven by habit, not branding.</strong></p>
+
+      <h2>A practical environmental outcome.</h2>
+
+      <p>Netleafa does not ask users to change beliefs or behavior.</p>
+
+      <p><strong>It removes friction.</strong></p>
+
+      <p>Less fuel is used because machines are unnecessary.<br>
+      Less plastic is consumed because bags are no longer required.<br>
+      Less labor is wasted because the system works passively.</p>
+
+      <p>Environmental benefit is a byproduct of better design, not idealism.</p>
+
+      <h2>The opportunity.</h2>
+
+      <p>Netleafa is not a single product launch.</p>
+
+      <p>It is the foundation of a new category focused on passive ground management across residential, commercial, and municipal environments.</p>
+
+      <p>What starts with catching what falls expands into how the ground is seeded, maintained, protected, and managed year-round.</p>
+
+      <p><strong>This is not lawn care. It is ground infrastructure.</strong></p>
+
+    </div>
+
+    <div class="divider-wrap">
+      <img src="assets/divider.svg" alt="" class="divider-img" />
+    </div>
+  </section>
+
+  <!-- CONNECT -->
+  <section id="connect" class="section">
+    <div class="content-wrap">
+
+      <p><strong>Let's talk.</strong> If you are interested in:</p>
+      <ul>
+        <li>Learning more about Netleafa</li>
+        <li>Exploring partnerships</li>
+        <li>Discussing investment opportunities</li>
+        <li>Participating in early pilots</li>
+      </ul>
+
+      <p><strong>We would like to hear from you.</strong></p>
+
+      <p class="contact-line">Donald Forst &nbsp;&nbsp; netleafy@gmail.com &nbsp;&nbsp; 804.546.8920</p>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/tree_f4f3f2.svg" alt="" class="footer-tree" />
+        <span class="footer-wordmark">netleafa</span>
+      </div>
+      <span class="footer-copy">©2026</span>
+    </div>
+  </footer>
+
+  <script>
+    const frames = document.querySelectorAll('.phase-frame');
+    let current = 0;
+    setInterval(() => {
+      frames[current].classList.remove('active');
+      current = (current + 1) % frames.length;
+      frames[current].classList.add('active');
+    }, 2800);
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
+
 </body>
 </html>
