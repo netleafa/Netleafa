@@ -1,174 +1,218 @@
-/*
-  NETLEAFA
-  Phase image cross-dissolve
+:root {
+  --off-white: #F4F3F2;
+  --terracotta: #C66134;
+  --charcoal: #2B2B2B;
+}
 
-  Phase1 -> Phase2 -> Phase3 -> repeat
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  The timing is intentionally slow and understated.
-*/
+body {
+  background-color: var(--off-white);
+  color: var(--charcoal);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.8;
+}
 
+/* NAV */
+.site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--off-white);
+  z-index: 100;
+  border-bottom: 1px solid rgba(43, 43, 43, 0.1);
+}
 
-document.addEventListener("DOMContentLoaded", () => {
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 0;
+}
 
-  const images = [
-    document.querySelector(".phase-image-one"),
-    document.querySelector(".phase-image-two"),
-    document.querySelector(".phase-image-three")
-  ];
+.nav-link {
+  color: var(--charcoal);
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
 
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
+.nav-link:hover {
+  color: var(--terracotta);
+}
 
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px 100px;
+}
 
-  /*
-    Cross-dissolve settings.
+.hero-tree {
+  width: 90px;
+  margin-bottom: 20px;
+}
 
-    HOLD_TIME:
-    How long each image remains visible.
+.logo-word {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 48px;
+  letter-spacing: 0.02em;
+  color: var(--charcoal);
+}
 
-    FADE_TIME:
-    How long the transition between images takes.
-  */
+.tagline {
+  margin-top: 16px;
+  font-size: 16px;
+  color: var(--charcoal);
+}
 
-  const HOLD_TIME = 6500;
-  const FADE_TIME = 3000;
+/* CONTENT SECTIONS */
+.content-section {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  text-align: center;
+}
 
+.content-section p {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 32px;
+  color: var(--charcoal);
+}
 
-  if (images.some(image => !image)) {
-    return;
+.content-section p.lede {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+.content-section p.subhead {
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 56px;
+  margin-bottom: 32px;
+}
+
+.content-section ul {
+  list-style: none;
+  margin-bottom: 32px;
+}
+
+.content-section ul li {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+.content-section .contact {
+  font-weight: 400;
+}
+
+.content-section .contact a {
+  color: var(--terracotta);
+  text-decoration: none;
+}
+
+/* DIVIDER */
+.divider {
+  display: block;
+  width: 180px;
+  margin: 20px auto;
+}
+
+/* PHASE CYCLE IMAGE */
+.phase-cycle {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  margin: 40px 0;
+}
+
+.phase-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.phase-image.active {
+  opacity: 1;
+}
+
+/* FOOTER */
+.site-footer {
+  text-align: center;
+  padding: 80px 20px 60px;
+}
+
+.footer-tree {
+  width: 60px;
+  margin-bottom: 16px;
+}
+
+.footer-word {
+  font-weight: 300;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+  color: var(--charcoal);
+}
+
+.footer-copyright {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--charcoal);
+}
+
+/* BACK TO TOP */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--terracotta);
+  color: var(--off-white);
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.back-to-top.visible {
+  display: flex;
+}
+
+.back-to-top:hover {
+  opacity: 0.9;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .nav {
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    padding: 16px 20px;
   }
 
-
-  /*
-    Preload the original image files so the transition
-    doesn't wait for a file to download.
-  */
-
-  [
-    "assets/Phase1.PNG",
-    "assets/Phase2.PNG",
-    "assets/Phase3.PNG"
-  ].forEach(src => {
-    const image = new Image();
-    image.src = src;
-  });
-
-
-  /*
-    The first image begins visible.
-  */
-
-  images.forEach((image, index) => {
-    image.style.transition = `opacity ${FADE_TIME}ms ease-in-out`;
-    image.style.opacity = index === 0 ? "1" : "0";
-  });
-
-
-  if (prefersReducedMotion) {
-    return;
+  .logo-word {
+    font-size: 36px;
   }
 
-
-  let current = 0;
-
-
-  function showNextImage() {
-
-    const next = (current + 1) % images.length;
-
-
-    images[next].style.zIndex = "2";
-    images[current].style.zIndex = "1";
-
-
-    /*
-      Force the browser to recognize the initial state
-      before beginning the fade.
-    */
-
-    requestAnimationFrame(() => {
-
-      images[next].style.opacity = "1";
-      images[current].style.opacity = "0";
-
-    });
-
-
-    current = next;
+  .content-section {
+    padding: 48px 20px;
   }
-
-
-  function scheduleNext() {
-
-    window.setTimeout(() => {
-
-      showNextImage();
-
-      scheduleNext();
-
-    }, HOLD_TIME + FADE_TIME);
-
-  }
-
-
-  /*
-    Begin the slow repeating sequence.
-  */
-
-  scheduleNext();
-
-
-  /*
-    Smooth navigation.
-
-    CSS handles the actual smooth scrolling. This small
-    handler makes sure the browser lands with the section
-    itself positioned cleanly below the header.
-  */
-
-  const navigationLinks = document.querySelectorAll(
-    ".main-nav a[href^='#']"
-  );
-
-
-  navigationLinks.forEach(link => {
-
-    link.addEventListener("click", event => {
-
-      const targetID = link.getAttribute("href");
-      const target = document.querySelector(targetID);
-
-      if (!target) {
-        return;
-      }
-
-      event.preventDefault();
-
-      const header = document.querySelector(".site-header");
-      const headerHeight = header ? header.offsetHeight : 0;
-
-      const targetPosition =
-        target.getBoundingClientRect().top +
-        window.scrollY -
-        Math.max(20, headerHeight * 0.08);
-
-      window.scrollTo({
-        top: targetPosition,
-        behavior: prefersReducedMotion ? "auto" : "smooth"
-      });
-
-      /*
-        Keep the URL anchor in sync without forcing
-        another browser jump.
-      */
-
-      if (history.replaceState) {
-        history.replaceState(null, "", targetID);
-      }
-
-    });
-
-  });
-
-});
+}
